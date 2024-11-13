@@ -11,7 +11,7 @@ import axios from "axios";
 //---- Local ----
 //axios.defaults.baseURL = "http://localhost:3001";
 //---- deploy ----
-axios.defaults.baseURL = "https://apifood-pi-production.up.railway.app/";
+axios.defaults.baseURL = "http://localhost:3001";
 
 ReactDOM.render(
   <React.StrictMode>
