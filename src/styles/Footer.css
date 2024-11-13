@@ -1,0 +1,41 @@
+.main-footer {
+
+    color: #00b7ff;
+    background-color: #dc3545;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .footer{
+    
+    display: flex;
+	  justify-content: space-around;
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 20px; 
+    color: white; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+  }
+  .abajo{
+    
+    justify-content: center;
+  }
+  .contenedor-footer{
+    padding-top: 50px;
+    background-color: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .posicionador-footer{
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 30vh;
+  }
+  .a{
+    color: white;
+    text-decoration: underline;
+  }

@@ -1,0 +1,58 @@
+
+.title{
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 80px; 
+    color: #F29F05; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+}
+.subTitle{
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 50px; 
+    color: #F29F05; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+}
+
+.div{
+  position: absolute;
+  top: 20%;
+  left: 29.5%;
+  margin: -25px 0 0 -79px; /* aplicar a top y al margen izquierdo un valor negativo par*/
+}
+#fondo{
+  background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-repeat: no-repeat;
+  height: 927px;
+  background-size: cover;
+}
+.botonLanding{
+    color: rgb(0, 0, 0);
+  margin: 0 .5rem;
+  background-color:#bfd989;
+  border-radius: .4rem;
+  font-size: 4rem;
+  padding: .4rem 1rem;
+  cursor:pointer;
+
+  color: #F29F05;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-size: 60px; 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+}
+
+.botonLanding:hover {
+  color:#bfd989;
+  background: #F29F05;
+  /*border: 3px solid #000000;*/
+}
+.video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

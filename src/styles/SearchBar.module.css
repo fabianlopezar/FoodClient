@@ -1,0 +1,25 @@
+.btn{
+  color: rgb(0, 0, 0);
+  margin: 0 .5rem;
+  background-color:#bfd989;
+  border-radius: .4rem;
+  font-size: 4rem;
+  padding: .4rem 1rem;
+  cursor:pointer;
+
+  color: #3b7302;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-size: 22px; 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+  }
+  .btn:hover {
+    color: rgb(255, 255, 255);
+    background: #F29F05;
+  
+  }
+  .input{
+    font-size: 25px;  
+    color: #3b7302;
+  }

@@ -1,0 +1,58 @@
+.card{
+    background: rgb(249, 249, 249);
+    width: 500px;
+    height: 390px;
+    /*float: left;*/
+    margin: 020px 0px 0px 90px;
+    border-radius: 15px;
+    box-shadow: 1px 10px 14px rgb(107,102,102);
+   align-items: center;
+
+}
+
+.card:hover{
+    border-color:#1d39c4;
+    background-color: #bfd989;
+}
+
+.title{
+    /*font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+    text-decoration: 'none';
+    color:#f22d1b;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+     
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 20px; 
+    
+  
+}
+.title:hover{
+    color: #f28705;
+    
+}
+.img{
+  padding: 5px;
+  height: 200px;
+  width: 300px;
+}
+
+.h5{
+    font-size: 20px;
+    padding: 0;
+    margin-top: 2px;
+}
+.img{
+    box-shadow: -1px 1px 8px rgba(0,0,0,.4);
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  
+ 
+
+

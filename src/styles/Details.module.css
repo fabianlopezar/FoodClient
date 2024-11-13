@@ -1,0 +1,122 @@
+.title{
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 50px; 
+    color: #F29F05; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.ent{
+    width: 400px;
+    background-color: #ffffff3f;
+    display: inline-table;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.table{
+    /*padding: 50px;
+    background-color: #ffffff3f;;
+    display: inline-table;
+    width: 400px;
+    
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;*/
+}
+
+
+.card{
+    /*background: rgba(250, 250, 250, 0.164);*/
+   
+    width: 50%;
+    height: 600px;
+    float: center;
+    
+    margin: 50px 0px 0px 470px;
+    border-radius: 15px;
+   
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+}
+
+.label{
+    text-align: center; 
+    font-family: Comic Sans MS; 
+    font-weight:bold; 
+    font-size: 35px; 
+    color: #F29F05; 
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+}
+.labelError{
+    
+ 
+    color: #f20521; 
+   
+}
+.button{
+    color: rgb(0, 0, 0);
+  margin: 0 .5rem;
+  background-color:#bfd989;
+  border-radius: .4rem;
+
+  padding: .4rem 1rem;
+  cursor:pointer;
+
+  color: #3b7302;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  font-size: 40px; 
+  font-family: Comic Sans MS; 
+  font-weight:bold; 
+}
+.button:hover {
+    color: rgb(255, 255, 255);
+    background: #F29F05;
+  
+  }
+  .container {
+    background: rgba(190, 217, 137, 0.923);
+    
+    width: 70%;
+    height: 800px;
+    float: center;
+    
+    margin: 0px 0px 0px 270px;
+    border-radius: 15px;
+   
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+  }
+  .img{
+    /*margin: 60px auto;*/
+    width: 70%;
+    height: 30%;
+    box-shadow: -1px 1px 8px rgba(0,0,0,.4);
+    /*align-items: left;*/
+    border-radius: 10px;
+    
+  }
+  .fondo{
+    background-image: url("https://img.freepik.com/premium-vector/many-kinds-bread-seamless-pattern-gift-wrap-wallpaper-background-kawaii-doodle-flat-cartoon-vecto_609998-346.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .columna{
+    float: left;
+    width: 50%;
+  }
+
+  .subtitulo{
+    padding-top: 100px;
+    color:#f20521;
+  }
+  .subtitulos{
+    color:#f20521;
+  }
