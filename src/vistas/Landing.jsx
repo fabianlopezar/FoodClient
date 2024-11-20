@@ -10,7 +10,7 @@ export default function Landing() {
       <video src={video} autoPlay muted loop className={style.video}></video>
       <div className={style.div} >
         <h1 className={style.title}>¡ 🥣Welcome🥣 !</h1>
-        <h1 className={style.subTitle}>🍳 Individual 🥗 Proyect 🥗 Food 🍳</h1>
+        <h1 className={style.subTitle}>🍳 Proyecto 🥗 Final 🥗 UAO 🍳</h1>
         <Link to="/home">
           <button className={style.botonLanding}>Enter</button>
         </Link>

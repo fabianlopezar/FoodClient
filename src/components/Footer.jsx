@@ -12,7 +12,9 @@ function Footer() {
             <h4>Creador:</h4>
             <ul className="list-unstyled">
               <li>Fabian Esteban Lopez Arias</li>
-              <li>fabianlopez928@gmail.com</li>
+              <li>fabian_lopez.edu.co</li>
+              <li>David Roa</li>
+              <li>david@uao.edu.co</li>
             </ul>
           </div>
             {/* Column2 */}
@@ -63,8 +65,8 @@ function Footer() {
         <hr />
         <div className="abajo">
           <p className="">
-            &copy;{new Date().getFullYear()} Proyecto Individual Fabian Lopez |
-            All rights reserved | Terms Of Service | Privacy
+            &copy;{new Date().getFullYear()} Proyecto Grupal Fabian Lopez | David Roa
+            All rights reserved | Terms Of Service | Privacy...
           </p>
         </div>
       </div>
