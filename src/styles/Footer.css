@@ -1,41 +1,67 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que el contenedor principal use toda la altura */
+}
+
+.posicionador-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Se asegura de que el contenedor ocupe toda la pantalla */
+}
+
+.contenido {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
 .main-footer {
+  color: #00b7ff;
+  background-color: #dc3545;
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 
-    color: #00b7ff;
-    background-color: #dc3545;
-    padding-top: 3em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, 
+               -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 
+               2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 
+               5px 5px #414D68;
+}
+
+.a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Media Queries para tamaños de pantalla */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Apila los elementos en columna */
+    font-size: 16px; /* Reduce el tamaño del texto */
   }
 
-  .footer{
-    
-    display: flex;
-	  justify-content: space-around;
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 20px; 
-    color: white; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+  .main-footer {
+    padding-top: 2em;
   }
-  .abajo{
-    
-    justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 14px; /* Ajusta el tamaño del texto para móviles */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0 1em; /* Agrega un poco de espacio interno */
   }
-  .contenedor-footer{
-    padding-top: 50px;
-    background-color: none;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+
+  .main-footer {
+    padding-top: 1.5em;
   }
-  .posicionador-footer{
-    position: relative;
-    padding-bottom: 3em;
-    min-height: 30vh;
-  }
-  .a{
-    color: white;
-    text-decoration: underline;
-  }
+}
