@@ -65,8 +65,8 @@ function Footer() {
         <hr />
         <div className="abajo">
           <p className="">
-            &copy;{new Date().getFullYear()} Proyecto Individual Fabian Lopez |
-            All rights reserved | Terms Of Service | Privacy
+            &copy;{new Date().getFullYear()} Proyecto Grupal Fabian Lopez | David Roa
+            All rights reserved | Terms Of Service | Privacy...
           </p>
         </div>
       </div>
