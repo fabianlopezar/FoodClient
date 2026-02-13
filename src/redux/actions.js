@@ -1,113 +1,84 @@
-import axios from "axios";
+import api from "../services/api";
+import {
+  GET_RECIPES,
+  GET_BY_TITLE,
+  GET_ID,
+  GET_BY_DIET,
+  FILTER_DIET,
+  FILTER_CREATED,
+  ORDER_BY_TITLE,
+  ORDER_BY_SCORE,
+  RESET_DETAIL,
+} from "./constants";
 
-const GET_RECIPES = "GET_RECIPES";
-
-const FILTER_DIET = "FILTER_DIET";
-const FILTER_CREATED = "FILTER_CREATED";
-
-const ORDER_BY_TITLE = "ORDER_BY_TITLE";
-const ORDER_BY_SCORE = "ORDER_BY_SCORE";
-
-const GET_BY_TITLE = "GET_BY_TITLE";
-const GET_BY_DIET = "GET_BY_DIET";
-const GET_ID = "GET_ID"
-
-const RESET_DETAIL="RESET_DETAIL"
-
-//----------------------------------------------------------------------
 export function getRecipes() {
   return async function (dispatch) {
-    let pedidoApi = await axios.get("/recipes");
-    return dispatch({
-      type: GET_RECIPES,
-      payload: pedidoApi.data,
-    });
-  };
-}
-//-------------- FUNCION FILTRAR POR DIETA ----------------------
-export function filterDiet(payload) {
-  return {
-    type: FILTER_DIET,
-    payload,
-  };
-}
-//--------------- FUNCION FILTRADO POR CREACION---------------------
-export function filterCreated(payload) {
-  return {
-    type: FILTER_CREATED,
-    payload,
+    try {
+      const { data } = await api.get("/recipes");
+      dispatch({ type: GET_RECIPES, payload: data });
+    } catch (error) {
+      dispatch({ type: GET_RECIPES, payload: [] });
+    }
   };
 }
 
-//--------------- FUNCION ORDENAR POR TITULO(ALFABETICAMENTE) -----
+export function filterDiet(payload) {
+  return { type: FILTER_DIET, payload };
+}
+
+export function filterCreated(payload) {
+  return { type: FILTER_CREATED, payload };
+}
+
 export function orderTitle(payload) {
-  return {
-    type: ORDER_BY_TITLE,
-    payload,
-  };
+  return { type: ORDER_BY_TITLE, payload };
 }
-//------------------------------------------------------------------
-export function resetDetail(){
-  return{
-    type:RESET_DETAIL 
-  }
-}
-//------------------------------------------------------------------
+
 export function orderScore(payload) {
-  return {
-    type: ORDER_BY_SCORE,
-    payload,
-  };
+  return { type: ORDER_BY_SCORE, payload };
 }
-//------------- FUNCION PARA EL SEARCH BAR--------------------------
+
+export function resetDetail() {
+  return { type: RESET_DETAIL };
+}
+
 export function getTitle(name) {
   return async function (dispatch) {
     try {
-      let pedidoApi = await axios.get(`/recipes?name=${name}`);
-      return dispatch({
-        type: GET_BY_TITLE,
-        payload: pedidoApi.data,
-      });
+      const encoded = encodeURIComponent(name.trim());
+      const { data } = await api.get(`/recipes?name=${encoded}`);
+      dispatch({ type: GET_BY_TITLE, payload: data });
     } catch (error) {
-      console.log(error);
+      dispatch({ type: GET_BY_TITLE, payload: [] });
     }
   };
 }
-//------------------------------------------------------------------
+
 export function getRecipesId(id) {
   return async function (dispatch) {
     try {
-      
-      let pedidoApi = await axios.get(`/recipes/${id}`);
-      console.log("soy la data del action: ", pedidoApi.data)
-      return dispatch({
-        type: GET_ID,
-        payload: pedidoApi.data,
-      });
+      const { data } = await api.get(`/recipes/${id}`);
+      dispatch({ type: GET_ID, payload: data });
     } catch (error) {
-      console.log("", error);
+      dispatch({ type: RESET_DETAIL });
     }
   };
 }
-//------------------------------------------------------------------
+
 export function getTypeDiet() {
   return async function (dispatch) {
     try {
-      let pedidoApi = await axios.get("/diets");
-      return dispatch({
-        type: GET_BY_DIET,
-        payload: pedidoApi.data,
-      });
+      const { data } = await api.get("/diets");
+      dispatch({ type: GET_BY_DIET, payload: data });
     } catch (error) {
-      console.log("", error);
+      dispatch({ type: GET_BY_DIET, payload: [] });
     }
   };
 }
-//------------------------------------------------------------------
+
 export function postRecipes(payload) {
   return async function () {
-    let pedidoApi = await axios.post("/recipe", payload);
-    return pedidoApi;
+    const { data } = await api.post("/recipe", payload);
+    return data;
   };
 }
-//------------------------------------------------------------------

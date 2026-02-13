@@ -1,122 +1,158 @@
-.title{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 80px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
-
+#fondo {
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/010/566/474/original/many-kinds-of-bread-seamless-pattern-gift-wrap-wallpaper-background-kawaii-doodle-flat-cartoon-illustration-vector.jpg");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
-
-.ent{
-    /*tarjeta */
-    width: 900px;
-    background-color: #ffffff3f;
-    display: inline-table;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
+.card {
+  background: rgba(250, 250, 250, 0.967);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-.btn{ 
-    display: inline-table;
-    padding: 50px;
-    background-color: #6e6e6e62;
-    padding: 10px 45px 10px 45px;
-    color: 	white;
-    border-radius: 50px;
- 
-}
-.btn:hover{
-    color: black;
-    background-color: white ;
-
-}
-.card{
-    background: rgba(250, 250, 250, 0.967);
-    width: 50%;
-    height: 800px;
-    float: center;
-    
-    margin: 50px 0px 0px 470px;
-    border-radius: 15px;
-   
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
+.title {
+  text-align: center;
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #F29F05;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68;
+  margin: 0 0 1rem;
 }
 
-.label{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 35px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+.ent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
-.labelError{
-    color: #f20521; 
+
+.ent > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
-.button{
-  color: rgb(0, 0, 0);
-  margin: 0 .5rem;
-  background-color:#bfd989;
-  border-radius: .4rem;
 
-  padding: .4rem 1rem;
-  cursor:pointer;
+.label {
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #F29F05;
+}
 
+.input {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   color: #3b7302;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  font-size: 22px; 
-  font-family: Comic Sans MS; 
-  font-weight:bold; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
-.button:hover {
-  color: rgb(255, 255, 255);
+
+.select {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem;
+  color: #3b7302;
+  background-color: #bfd989;
+  border: 1px solid #000;
+  border-radius: 25px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.labelError {
+  color: #f20521;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.btn {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  color: #3b7302;
+  background-color: #bfd989;
+  border: 1px solid #000;
+  border-radius: 25px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.btn:hover {
+  color: #fff;
   background: #F29F05;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button {
+  padding: 0.4rem 0.75rem;
+  margin-left: 0.5rem;
+  color: #3b7302;
+  background-color: #bfd989;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #fff;
+  background: #F29F05;
+}
+
+.selectedDiets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.selectedDiets > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(191, 217, 137, 0.5);
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+}
+
+@media (min-width: 480px) {
+  #fondo {
+    padding: 1.5rem;
   }
-  .select {
-    color: rgb(0, 0, 0);
-    margin: 0 .5rem;
-    background-color:#bfd989;
-    border-radius: .4rem;
-  
-    padding: .4rem 1rem;
-    cursor:pointer;
-  
-    color: #3b7302;
-    border: 1px solid black;
-    border-radius: 25px;
-    font-size: 22px; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
+
+  .card {
+    padding: 2rem;
   }
-  .btn{
-    color: rgb(0, 0, 0);
-    margin: 0 .5rem;
-    background-color:#bfd989;
-    border-radius: .4rem;
-  
-    padding: .4rem 1rem;
-    cursor:pointer;
-  
-    color: #3b7302;
-    border: 1px solid black;
-    border-radius: 25px;
-    font-size: 30px; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 700px;
+    padding: 2.5rem;
   }
-  .input{
-    font-size: 20px; 
-    color: #3b7302;
+
+  .ent {
+    gap: 1rem;
   }
-  #fondo{
-    background-image: url("https://static.vecteezy.com/system/resources/previews/010/566/474/original/many-kinds-of-bread-seamless-pattern-gift-wrap-wallpaper-background-kawaii-doodle-flat-cartoon-illustration-vector.jpg");
-    background-repeat: no-repeat;
-    
-    background-size: cover;  
-  }
+}

@@ -9,7 +9,7 @@ export default function Card({id,title,img,typeDiet,score}) {
         <h3 className={style.title}>Title: {title}</h3>
       </Link>
       <Link to={`/recipes/${id}`}>
-        <img className={style.img} src={img} alt="🍽️not img🍽️" width="200px" height="250px"/>
+        <img className={style.img} src={img} alt={title} />
       </Link>
       <div>
         <p>

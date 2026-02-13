@@ -24,16 +24,18 @@ export default function SearchBar() {
   }
 
   return (
-    <div>
+    <form onSubmit={handleSubmit} className={s.form}>
       <input
         className={s.input}
         type="text"
         placeholder="Insert Recipe Name"
+        value={title}
         onChange={(e) => handleInputChange(e)}
+        aria-label="Recipe name"
       />
-      <button className={s.btn} type="submit" onClick={(e) => handleSubmit(e)}>
+      <button className={s.btn} type="submit">
         Search
       </button>
-    </div>
+    </form>
   );
 }

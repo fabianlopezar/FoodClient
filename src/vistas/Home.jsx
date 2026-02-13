@@ -82,7 +82,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div>
+        <div className={s.paginadoWrapper}>
           <Paginado
             itemsPerPage={itemsPerPage}
             allItems={allRecipes.length}

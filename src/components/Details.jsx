@@ -19,11 +19,10 @@ export default function Details(props) {
 
   useEffect(() => {
     dispatch(getRecipesId(id));
-
     return () => {
       dispatch(resetDetail());
     };
-  }, []);
+  }, [id, dispatch]);
 
   const myRecipe = useSelector((state) => state.details);
   return (
@@ -60,8 +59,10 @@ export default function Details(props) {
               <h5>{myRecipe[0].healthScore}/100</h5>
               <h1 className={s.subtitulos}>Analyzed Instructions:</h1>
                 {Array.isArray(myRecipe[0].analyzedInstructions)
-                  ? myRecipe[0].analyzedInstructions.map((el) =>
-                      el.steps.map((elem) =><div> <p>{elem.step}</p></div>)
+                  ? myRecipe[0].analyzedInstructions.map((el, i) =>
+                      el.steps.map((elem, j) => (
+                        <div key={`${i}-${j}`}><p>{elem.step}</p></div>
+                      ))
                     )
                   : "No hay por el momento."}
            

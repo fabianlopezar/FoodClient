@@ -4,8 +4,6 @@ import Landing from "./vistas/Landing.jsx";
 import Home from "./vistas/Home.jsx";
 import { Create } from "./components/Create";
 import Details from "./components/Details";
-import axios from 'axios';
-axios.defaults.baseURL='http://localhost:3001';
 
 function App() {
   return (

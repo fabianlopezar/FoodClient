@@ -1,39 +1,65 @@
-.paginado{
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    background-color: rgb(201, 120, 120);
-    /* margin-top: 30%; */
-    align-content: space-around;
-    justify-content: center;
-    border-radius: 20px;
+.paginado {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(19, 1, 1, 0.295);
+  border-radius: 20px;
+  max-width: 100%;
 }
 
-.num{
-   display: flex;
-   justify-content: space-between;
-   border-radius: 20px;
-   
+.ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-
-.ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    color: rgb(24, 24, 24);
-    
+.ul li {
+  list-style: none;
 }
+
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50% ;
-    height: 1.5rem;
-    width: 1.5rem;
-    border: 1px solid rgb(0, 0, 0);
-    margin-bottom: 2rem;
-    background-color:rgb(255, 255, 255);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0 0.25rem;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: rgb(24, 24, 24);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.container:hover {
+  background-color: #bfd989;
+  color: #3b7302;
+}
+
+@media (min-width: 480px) {
+  .paginado {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .ul {
+    gap: 0.5rem;
+  }
+
+  .container {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+  }
 }

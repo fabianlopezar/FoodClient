@@ -1,70 +1,100 @@
-
-.title{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 80px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
-}
-.subTitle{
-    text-align: center; 
-    font-family: Comic Sans MS; 
-    font-weight:bold; 
-    font-size: 50px; 
-    color: #F29F05; 
-    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
-}
-
-.div{
-  position: absolute;
-  top: 20%;
-  left: 29.5%;
-  margin: -25px 0 0 -79px; /* aplicar a top y al margen izquierdo un valor negativo par*/
-}
-.fondo{
+.fondo {
+  position: relative;
+  min-height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   background-repeat: no-repeat;
-  height: 927px;
   background-size: cover;
-}
-.botonLanding{
-    color: rgb(0, 0, 0);
-  margin: 0 .5rem;
-  background-color:#bfd989;
-  border-radius: .4rem;
-  font-size: 4rem;
-  padding: .4rem 1rem;
-  cursor:pointer;
-
-  color: #F29F05;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  font-size: 60px; 
-  font-family: Comic Sans MS; 
-  font-weight:bold; 
-  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68; 
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.botonLanding:hover {
-  color:#bfd989;
-  background: #F29F05;
-  /*border: 3px solid #000000;*/
-}
-.video{
+.video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 
-@media (max-width: 1400px) {
+.div {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 100%;
+}
 
+.title {
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  font-size: clamp(2rem, 10vw, 5rem);
+  color: #F29F05;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68,
+    -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68,
+    3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
 
+.subTitle {
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  font-size: clamp(1.1rem, 5vw, 3rem);
+  color: #F29F05;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68,
+    -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68,
+    3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+  margin: 0 0 1.5rem;
+}
+
+.botonLanding {
+  color: #F29F05;
+  background-color: #bfd989;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: clamp(0.6rem, 3vw, 1rem) clamp(1.5rem, 6vw, 2.5rem);
+  font-size: clamp(1.25rem, 5vw, 2.5rem);
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68;
+  transition: color 0.2s, background-color 0.2s;
+  max-width: 100%;
+}
+
+.botonLanding:hover {
+  color: #bfd989;
+  background: #F29F05;
+}
+
+/* Tablet: ocultar video para mejorar rendimiento y mostrar fondo */
+@media (max-width: 1024px) {
   .video {
     display: none;
   }
+
   .fondo {
-    background: rgba(247, 239, 134, 0.678); /* Cambia el fondo a amarillo */
-    background-image: none; /* Elimina la imagen de fondo */
+    background: rgba(247, 239, 134, 0.85);
+    background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .div {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .botonLanding {
+    width: 100%;
+    max-width: 280px;
   }
 }

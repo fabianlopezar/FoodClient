@@ -1,25 +1,47 @@
-.btn{
-  color: rgb(0, 0, 0);
-  margin: 0 .5rem;
-  background-color:#bfd989;
-  border-radius: .4rem;
-  font-size: 4rem;
-  padding: .4rem 1rem;
-  cursor:pointer;
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1 1 auto;
+  max-width: 100%;
+}
 
+.input {
+  flex: 1 1 120px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-size: clamp(0.8rem, 2.2vw, 1rem);
   color: #3b7302;
-  border: 1px solid #ffffff;
+  border: 1px solid #ccc;
   border-radius: 25px;
-  font-size: 22px; 
-  font-family: Comic Sans MS; 
-  font-weight:bold; 
+  box-sizing: border-box;
+}
+
+.btn {
+  flex-shrink: 0;
+  padding: 0.4rem 0.75rem;
+  color: #3b7302;
+  background-color: #bfd989;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  font-size: clamp(0.8rem, 2.2vw, 1rem);
+  font-family: Comic Sans MS, cursive;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #F29F05;
+}
+
+@media (min-width: 480px) {
+  .form {
+    flex: 0 1 auto;
+    max-width: 320px;
   }
-  .btn:hover {
-    color: rgb(255, 255, 255);
-    background: #F29F05;
-  
-  }
-  .input{
-    font-size: 25px;  
-    color: #3b7302;
-  }
+}
