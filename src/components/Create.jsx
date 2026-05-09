@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { IonContent, IonPage } from "@ionic/react";
 import { Link } from "react-router-dom";
 import { postRecipes, getTypeDiet } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -96,7 +97,9 @@ export function Create() {
     errors.title || errors.summary || errors.healthScore;
 
   return (
-    <div id={s.fondo}>
+    <IonPage>
+      <IonContent className="ion-no-padding">
+        <div id={s.fondo}>
       <Link to="/home">
         <button type="button" className={s.btn}>
           BACK
@@ -223,6 +226,8 @@ export function Create() {
         )}
       </div>
       <Footer />
-    </div>
+        </div>
+      </IonContent>
+    </IonPage>
   );
 }

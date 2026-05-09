@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { IonContent, IonPage } from "@ionic/react";
 import SearchBar from "../components/SearchBar";
 import NavBar from "../components/NavBar";
 import { useSelector, useDispatch } from "react-redux";
@@ -51,7 +52,9 @@ export default function Home() {
   }
 
   return (
-    <div className={s.fondo}>
+    <IonPage>
+      <IonContent className="ion-no-padding">
+        <div className={s.fondo}>
       <div className={s.Nav}>
         <div className={s.container}>
           <Link to="/">
@@ -112,6 +115,8 @@ export default function Home() {
             
       </div>
       <Footer />
-    </div>
+        </div>
+      </IonContent>
+    </IonPage>
   );
 }

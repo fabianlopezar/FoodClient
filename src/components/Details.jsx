@@ -1,5 +1,5 @@
-
 import React from "react";
+import { IonContent, IonPage } from "@ionic/react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getRecipesId } from "../redux/actions.js";
@@ -26,7 +26,9 @@ export default function Details(props) {
 
   const myRecipe = useSelector((state) => state.details);
   return (
-    <div className={s.fondo}>
+    <IonPage>
+      <IonContent className="ion-no-padding">
+        <div className={s.fondo}>
       <div>
         <Link to="/home">
           <button className={s.button}>Home</button>
@@ -73,7 +75,9 @@ export default function Details(props) {
         </div>
         <Footer />
       </div>
-    </div>
+        </div>
+      </IonContent>
+    </IonPage>
   );
 }
 
