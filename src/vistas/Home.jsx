@@ -80,8 +80,15 @@ export default function Home() {
           <NavBar setCurrentPage={setCurrentPage} />
           <SearchBar />
 
-          <Link to="/recipe" >
-            <button className={s.button}>Recipe Creator</button>
+          <Link to="/recipe">
+            <button type="button" className={s.button}>
+              Recipe Creator
+            </button>
+          </Link>
+          <Link to="/notifications/settings">
+            <button type="button" className={s.button}>
+              Notificaciones
+            </button>
           </Link>
         </div>
 
