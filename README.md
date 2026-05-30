@@ -11,7 +11,6 @@ Aplicación híbrida **Ionic + React + Capacitor** para explorar recetas, crear 
 | Nombre | Rol / Rama | Contacto |
 |--------|------------|----------|
 | Fabian Esteban López Arias | Landing, estructura base (`Devfab`) | fabianlopez928@gmail.com |
-| [Integrante DevRoa] | Responsive UI (`DevRoa`) | — |
 
 Ver detalle de contribuciones en [docs/CONTRIBUCIONES.md](docs/CONTRIBUCIONES.md).
 
@@ -22,6 +21,7 @@ Ver detalle de contribuciones en [docs/CONTRIBUCIONES.md](docs/CONTRIBUCIONES.md
 | Recurso | URL |
 |---------|-----|
 | Repositorio GitHub | https://github.com/fabianlopezar/FoodClient |
+                      https://github.com/fabianlopezar/ApiFood-Pi
 | Demo / Portafolio | https://portafolio-fabianlopezar.vercel.app |
 | Prototipo visual (captura) | [Imagen PI-Food](https://portafolio-fabianlopezar.vercel.app/static/media/PI-Food.d2fb705a4047a5aebc0d.png) |
 
