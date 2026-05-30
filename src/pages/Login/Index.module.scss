@@ -1,0 +1,77 @@
+.formPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #bfd989, #f29f05);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  text-align: center;
+  color: #3b7302;
+  font-family: Comic Sans MS, cursive;
+  margin-bottom: 1rem;
+}
+
+.field {
+  margin-bottom: 0.75rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #414d68;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+}
+
+.error {
+  color: #f20521;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 25px;
+  background: #3b7302;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #3b7302;
+}
+
+.banner {
+  background: #fff3cd;
+  color: #664d03;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}

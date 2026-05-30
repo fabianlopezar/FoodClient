@@ -1,38 +1,120 @@
-# Food-Client
+# FoodClient — Proyecto Final UAO
 
-![Captura del Juego](https://portafolio-fabianlopezar.vercel.app/static/media/PI-Food.d2fb705a4047a5aebc0d.png)
+![Captura del proyecto](https://portafolio-fabianlopezar.vercel.app/static/media/PI-Food.d2fb705a4047a5aebc0d.png)
 
-# 🍽️ Food Plates App
-
-Este proyecto es una aplicación web creada con **Vite** y **React** para explorar, descubrir y detallar una variedad de platos de comida. Es ideal para restaurantes, chefs o entusiastas culinarios que buscan mostrar su menú de manera visual y atractiva.
+Aplicación híbrida **Ionic + React + Capacitor** para explorar recetas, crear platos, chatear en tiempo real y ver restaurantes en mapa.
 
 ---
 
-## 🚀 Características
+## Integrantes del equipo
 
-- 🌟 **Exploración de Platos:** Explora una lista dinámica de platos con imágenes y descripciones.
-- 📝 **Detalles del Plato:** Cada plato incluye información detallada como ingredientes, precio y calificaciones.
-- 🔍 **Búsqueda y Filtros:** Encuentra platos rápidamente filtrando por categorías (entradas, principales, postres, etc.).
-- 📱 **Responsive Design:** La aplicación es totalmente compatible con dispositivos móviles y de escritorio.
+| Nombre | Rol / Rama | Contacto |
+|--------|------------|----------|
+| Fabian Esteban López Arias | Landing, estructura base (`Devfab`) | fabianlopez928@gmail.com |
+| [Integrante DevRoa] | Responsive UI (`DevRoa`) | — |
 
----
-
-## 🛠️ Tecnologías Utilizadas
-
-- [**Vite**](https://vitejs.dev/) - Entorno de desarrollo rápido.
-- [**React**](https://react.dev/) - Biblioteca para construir la interfaz de usuario.
-- [**CSS Modules / Tailwind CSS**] - Para estilos eficientes y personalizables.
-- [**React Router**](https://reactrouter.com/) - Navegación entre páginas.
-- [**Axios**](https://axios-http.com/) - Para llamadas a APIs (si aplica).
-- [**Vercel**](https://vercel.com/) - Despliegue rápido (opcional).
+Ver detalle de contribuciones en [docs/CONTRIBUCIONES.md](docs/CONTRIBUCIONES.md).
 
 ---
 
-## 📦 Instalación y Configuración
+## Enlaces al prototipo
 
-1. Clona este repositorio:  
-   ```bash
-   git clone https://github.com/usuario/food-plates-app.git
-   cd food-plates-app
+| Recurso | URL |
+|---------|-----|
+| Repositorio GitHub | https://github.com/fabianlopezar/FoodClient |
+| Demo / Portafolio | https://portafolio-fabianlopezar.vercel.app |
+| Prototipo visual (captura) | [Imagen PI-Food](https://portafolio-fabianlopezar.vercel.app/static/media/PI-Food.d2fb705a4047a5aebc0d.png) |
 
- 
+---
+
+## APIs de backend consumidas
+
+### REST — API Food PI (Node.js / Render)
+
+Base URL por defecto: `https://apifood-pi.onrender.com`
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/recipes` | Lista todas las recetas |
+| `GET` | `/recipes?name={nombre}` | Búsqueda por título |
+| `GET` | `/recipes/:id` | Detalle de una receta |
+| `GET` | `/diets` | Tipos de dieta disponibles |
+| `POST` | `/recipe` | Crear receta nueva |
+
+Configura otra URL con `VITE_API_URL` en `.env`.
+
+### Firebase
+
+| Servicio | Uso |
+|----------|-----|
+| **Authentication** | Login / registro (email + contraseña) |
+| **Firestore** | Chat en tiempo real, favoritos, restaurantes en mapa |
+| **Transacciones** | `runTransaction` al guardar favoritos |
+
+Variables: ver [.env.example](.env.example).
+
+### OpenStreetMap
+
+Tiles del mapa: `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+├── helpers/       # Utilidades reutilizables
+├── context/       # AuthContext
+├── pages/         # Landing, Home, Login, Chat, Map…
+├── components/    # Card, NavBar, Shared/Footer…
+├── hooks/         # useAuth, useChat, useGeolocation…
+├── routes/        # AppRoutes, UserRoutes, AdminRoutes
+├── config/        # Firebase
+└── services/      # API REST, Firebase, notificaciones
+```
+
+Documentación completa del alcance: [docs/ALCANCE_SISTEMA.md](docs/ALCANCE_SISTEMA.md).
+
+---
+
+## Tecnologías
+
+- Ionic React 8 · React 18 · Vite · Capacitor 8
+- Redux + Thunk · Axios
+- Firebase (Auth + Firestore)
+- Leaflet · Capacitor Geolocation · Capacitor Motion
+- SCSS Modules
+
+---
+
+## Instalación
+
+```bash
+git clone https://github.com/fabianlopezar/FoodClient.git
+cd FoodClient
+npm install
+cp .env.example .env
+npm run dev
+```
+
+### Android
+
+```bash
+npm run cap:sync
+```
+
+---
+
+## Scripts
+
+| Comando | Acción |
+|---------|--------|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run cap:sync` | Build + sincronizar Capacitor |
+
+---
+
+## Ramas Git
+
+Todas las ramas de feature (`Devfab`, `DevRoa`) están **mezcladas en `main`**.
